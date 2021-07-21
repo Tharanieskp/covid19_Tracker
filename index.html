@@ -1,0 +1,91 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Covid-19 Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" href="co.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="covid.js"></script>
+    <script type="text/javascript" src="dict.js"></script>
+    
+   </head>
+  <body onload="details()">
+     <!--invoking the details() function on rendering the content -->
+     <div class="header">
+      <h1>Covid-19 Tracker</h1>
+   
+  </div>
+    <div class="main">
+        <!--Getting the state and district details-->
+      <form name="covid" class="container">
+        <div class="input-text">
+          
+          <select id="input" name="state" onchange="random_function()" class="chosen">
+            
+            <option>Select State</option>
+            <option>Andaman and Nicobar Islands</option>
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chandigarh</option>
+            <option>Chhattisgarh</option>
+            <option>Dadra and Nagar Haveli and Daman and Diu</option>
+            <option>Delhi</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+            <option>Jammu and Kashmir</option>
+            <option>Jharkhand</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>            
+            <option>Lakshadweep</option>
+            <option>Madhya Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Manipur</option>
+            <option>Meghalaya</option>
+            <option>Mizoram</option>
+            <option>Nagaland</option>
+            <option>Odisha</option>
+            <option>Puducherry</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+            <option>Sikkim</option>
+            <option>Tamil Nadu</option>
+            <option>Telangana</option>
+            <option>Tripura</option>
+            <option>Uttar Pradesh</option>
+            <option>Uttarakhand</option>
+            <option>West Bengal</option>     
+        </select>
+        <select id="output" onchange="random_function1()">
+          <option>Select District</option>
+        </select>
+          <input type="button" onclick="getValue()" value="Track"/><hr/>
+      </div>
+    
+            <!--invoking the getvalue() function by clicking the button --> 
+
+        <div class="board">
+          <div class="card d"><i class="fa fa-frown-o"></i><h5>Death</h5><span id="dec"></span></div>
+          <div class="card a"><i class="fa fa-users"></i><h5>District</h5><span id="res"></span></div>
+          <div class="card ca"><i class="fa fa-bed"></i><h5>Active</h5><span id="act"></span></div>
+          <div class="card cr"><i class="fa fa-ambulance" ></i><h5>Confirmed</h5><span id="con"></span></div>
+          
+          <div class="card r"><i class="fa fa-heartbeat" ></i><h5>Recovered</h5><span id="rec"></span></div>
+          <div class="card t"><i class="fa fa-area-chart"></i><h5>Status</h5><span id="safe"></span></div>
+        </div>
+        </div>
+      </form>
+    </div>
+    
+      <p id="res"></p>
+      <p id="act"></p>
+      <p id="con"></p>
+      <p id="dec"></p>
+      <p id="rec"></p>
+      <p id="safe"></p>
+  </body>
+</html>
